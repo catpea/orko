@@ -1,0 +1,35 @@
+{
+  "type": "module",
+  "name": "orko",
+  "version": "1.0.0",
+  "description": "Automatic Package And Repository Maintenance Bot",
+  "main": "index.js",
+  "scripts": {
+    "save": "git add .; git commit -m 'New Release'; git push; npm version patch; npm publish; git push;",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/catpea/orko.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/catpea/orko/issues"
+  },
+  "bin": {
+    "orko": "./index.js"
+  },
+  "homepage": "https://github.com/catpea/orko#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "commander": "^8.0.0",
+    "conf": "^10.0.1",
+    "execa": "^5.1.1",
+    "javascript-time-ago": "^2.3.7",
+    "mkdirp": "^1.0.4",
+    "ms": "^2.1.3",
+    "oneof": "^2.0.0"
+  }
+}
