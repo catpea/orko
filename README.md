@@ -17,3 +17,7 @@ publishing to npm
 pushing to gihub
 
 ```
+
+## TODO
+
+- add blacklist support to filter out unusual repositories
