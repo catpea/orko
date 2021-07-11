@@ -9,7 +9,7 @@ import { Command } from 'commander/esm.mjs';
 import Conf from 'conf';
 
 const program = new Command();
-const config = new Conf({projectSuffix:'catpea'});
+const config = new Conf({projectName: 'orko', projectSuffix:'catpea'});
 TimeAgo.addDefaultLocale(en);
 const timeAgo = new TimeAgo('en-US');
 
