@@ -255,7 +255,7 @@ async function licenseFix({state, license}) {
 async function saveScript({state, }) {
   const packageJson = await fs.readJson(path.join(state.repositoryPath, 'package.json'));
   if(!packageJson.scripts.save){
-    packageJson.scripts.save = `"save": "git add .; git commit -m 'New Release'; git push; npm version patch; npm publish; git push;"`
+    packageJson.scripts.save = `git add .; git commit -m 'New Release'; git push; npm version patch; npm publish; git push;`
     state.updateLog.push('add save script');
   }
   await fs.writeJson(path.join(state.repositoryPath, 'package.json'), packageJson, {spaces: 2})
