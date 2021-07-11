@@ -20,7 +20,10 @@ const timeAgo = new TimeAgo('en-US');
 
 program
   .version('1.0.0')
-  .requiredOption('-u, --username <user>', 'specify the username')
+
+  .requiredOption('-u, --username <user>', 'specify the github username')
+  .requiredOption('-n, --npm-username <user>', 'specify the npm username')
+
   .option('-p, --repository <name>', 'specify a repository name instead of selecting one at random')
   .option('-c, --cooldown <miliseconds>', 'prevent hammering github API', 1000*60*45)
   .option('-l, --license <license>', 'set license field')
@@ -185,7 +188,7 @@ async function identifyRepository({state, }) {
       process.exit(1);
     }
     state.packageAuthor = packageJson._npmUser;
-    const isOwner = packageJson._npmUser.startsWith(options.username);
+    const isOwner = packageJson._npmUser.startsWith(options.npmUsername);
     if(isOwner){
       state.isPublished = true;
       console.log(`Package is published to npm by: ${packageJson._npmUser}`);
