@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "orko",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Automatic Package And Repository Maintenance Bot",
   "main": "index.js",
   "scripts": {
